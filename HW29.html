@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #mainForm {
+            background: -moz-linear-gradient(45deg, rgba(0,128,128,1) 0%, rgba(192,192,192,1) 13%, rgba(5,193,255,1) 59%, rgba(255,255,255,1) 88%, rgba(0,87,87,1) 100%); /* ff3.6+ */
+            background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(0,128,128,1)), color-stop(13%, rgba(192,192,192,1)), color-stop(59%, rgba(5,193,255,1)), color-stop(88%, rgba(255,255,255,1)), color-stop(100%, rgba(0,87,87,1))); /* safari4+,chrome */
+            background: -webkit-linear-gradient(45deg, rgba(0,128,128,1) 0%, rgba(192,192,192,1) 13%, rgba(5,193,255,1) 59%, rgba(255,255,255,1) 88%, rgba(0,87,87,1) 100%); /* safari5.1+,chrome10+ */
+            background: -o-linear-gradient(45deg, rgba(0,128,128,1) 0%, rgba(192,192,192,1) 13%, rgba(5,193,255,1) 59%, rgba(255,255,255,1) 88%, rgba(0,87,87,1) 100%); /* opera 11.10+ */
+            background: linear-gradient(45deg, rgba(0,128,128,1) 0%, rgba(192,192,192,1) 13%, rgba(5,193,255,1) 59%, rgba(255,255,255,1) 88%, rgba(0,87,87,1) 100%); /* w3c */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#005757', endColorstr='#008080',GradientType=1 ); /* ie6-9 */
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+
+        
+
+        #form2fill {
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        .btn {
+            
+            display: inline-block;
+            font-size: larger;
+            margin-left: 27%;
+        }
+
+        #pageBody {
+            background-color: lightblue;
+        }
+
+        .personDetails , .labels{
+            text-align:center;
+            font-size:2em;
+        }
+    </style>
+    <script src="indexHW29.js"></script>
+
+</head>
+<body id="pageBody">
+
+    <div id="divWRAP">
+        <h1>Welcome to my Homework. <br /> I need some info of you. <br />Please fill up your Name,favourite color and Birthdate. <br />Your age will be calculated automatically.</h1>
+        <br />
+        <hr />
+        <h2>Please fill the form below and save:</h2>
+
+        <div id="mainForm">
+            <form id="form2fill">
+                <div>
+                    <label class="labels">Please enter your name:</label>
+                    <input type="text" class="personDetails" id="nameInput" />
+                </div>
+                <br />
+                <div>
+                    <label class="labels">Please choose your favourite color:</label>
+                    <input type="color" class="personDetails" id="colorInput" />
+                </div>
+                <br />
+                <div>
+                    <label class="labels">Please enter birth day:</label>
+                    <input type="date" class="personDetails" id="birthInput" />
+                </div>
+                <br />
+                <div id="ageProp">
+                    <label class="labels">your calculated age is:</label>
+                    <input type="text" class="personDetails" id="calcAge" readonly />
+                   
+                </div>
+            </form>
+            <hr />
+            <br />
+            <div class="btn">
+                <button onclick="start()">Save your details to Local Storage</button>
+                <button onclick="clearLocal()">Clear Local Storage</button>
+                <button onclick="print2Screen()">Display Local Storage</button>
+            </div>
+            <br />
+            <br />
+            <br />
+            <br />
+            <h3>Here is the history:</h3>
+            <ul  id="results">
+               
+            </ul>
+        </div>
+        
+    </div>
+
+</body>
+</html>
